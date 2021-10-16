@@ -1,0 +1,68 @@
+{
+  "posts": [
+    {
+      "title": "First Post",
+      "text": "Post about pizza",
+      "author": "Admin",
+      "date": "2021-10-09T16:25:54.018Z",
+      "imgPath": "https://druziatesta.ru/wp-content/uploads/chilichocola-pizza-master-klass.jpg",
+      "id": 1
+    },
+    {
+      "title": "Second Post",
+      "text": "Post about pasta",
+      "author": "Ivan",
+      "date": "2021-10-09T16:26:21.343Z",
+      "imgPath": "https://druziatesta.ru/wp-content/uploads/chilichocola-pizza-master-klass.jpg",
+      "id": 2
+    },
+    {
+      "title": "Third Psot",
+      "text": "Post about drinks",
+      "author": "Petro",
+      "date": "2021-10-09T16:26:40.413Z",
+      "imgPath": "https://druziatesta.ru/wp-content/uploads/chilichocola-pizza-master-klass.jpg",
+      "id": 3
+    },
+    {
+      "title": "Post",
+      "text": "Post about post",
+      "author": "User",
+      "date": "2021-10-09T16:27:01.672Z",
+      "imgPath": "https://druziatesta.ru/wp-content/uploads/chilichocola-pizza-master-klass.jpg",
+      "id": 4
+    }
+  ],
+  "category": [
+    {
+      "name": "pizza",
+      "id": 1
+    },
+    {
+      "name": "salads",
+      "id": 2
+    },
+    {
+      "name": "drinks",
+      "id": 3
+    }
+  ],
+  "product": [
+    {
+      "category": "pizza",
+      "name": "zxc",
+      "description": "zxc",
+      "price": "100",
+      "imagePath": "C:\\fakepath\\primavera.png",
+      "id": 1
+    },
+    {
+      "category": "drinks",
+      "name": "vine",
+      "description": "qqq",
+      "price": "55",
+      "imagePath": "C:\\fakepath\\menu-icon-3.svg",
+      "id": 2
+    }
+  ]
+}

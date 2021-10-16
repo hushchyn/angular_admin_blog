@@ -1,0 +1,49 @@
+<div class="card">
+    <div class="card-header" >Category
+        <button class="btn btn-dark-set" data-bs-toggle="modal" data-bs-target="#addCategory" >Add</button>
+    </div>
+    <div class="card-body">
+         <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="filter category here..." [(ngModel)]="field">
+         <hr>
+         <table class="table table-bordered">
+            <thead class=" table-secondary ">
+              <tr>
+                <th scope="col" class="num">#</th>
+                <th scope="col">Name</th>
+                <th scope="col" class="set">Edit</th>
+                <th scope="col" class="set">Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let c of categories | category:field; let i = index; " >
+                    <td> {{ i +1 }} </td>
+                    <td> {{ c.name }} </td>
+                    <td> <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#addCategory" (click)="editCategory(c)">Edit</button></td>
+                    <td> <button type="button" class="btn btn-dark"(click)="deleteCategory(c)">Delete</button> </td>
+                </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
+
+<div class="modal fade" id="addCategory" tabindex="-1" aria-labelledby="addCategoryLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <form [formGroup]="categoryForm" class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addCategoryLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <input class="form-control" formControlName="name" type="text" placeholder="name caregory..." aria-label="name here">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-bs-dismiss="modal" #close>Close</button>
+                <button type="button" class="btn btn-dark" *ngIf="editStatus"  [disabled]='categoryForm.invalid' (click)="createCategory()">Add</button>
+                <button type="button" class="btn btn-dark" *ngIf="!editStatus" (click)="saveEdit()">Save edit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+

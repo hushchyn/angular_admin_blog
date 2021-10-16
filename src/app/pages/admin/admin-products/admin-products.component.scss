@@ -1,0 +1,48 @@
+.btn-dark-set{
+    background-color: #212529;
+    width: 90px;
+    color: white;
+}
+
+.card-header{
+    display: flex;
+    justify-content: space-between;
+    }
+
+.set{
+    width: 80px;
+}
+
+label{
+    display: flex;
+}
+
+.form-control{
+    width: 85%;
+}
+
+.form-select{
+    width: 85%;
+}
+
+.modalAddProduct{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.image{
+    text-align: center;
+}
+
+.btn-secondary{
+width: 45%;
+}
+
+.btn-danger{
+    width: 45%;
+}
+
+.mtop{
+    margin: 200px auto;
+}

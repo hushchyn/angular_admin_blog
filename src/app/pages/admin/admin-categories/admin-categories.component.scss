@@ -1,0 +1,23 @@
+.btn-dark-set{
+    background-color: #212529;
+    width: 90px;
+    color: white;
+}
+
+.card-header{
+display: flex;
+justify-content: space-between;
+}
+
+
+.table>:not(:last-child)>:last-child>* {
+    border-bottom-color: inherit;
+}
+
+.num{
+    width: 50px;
+}
+
+.set{
+    width: 120px;
+}

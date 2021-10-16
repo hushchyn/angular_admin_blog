@@ -1,0 +1,42 @@
+<form [formGroup]="postForm" >
+    <div class="mb-3">
+      <input type="text" class="form-control"  id="exampleInputEmail1"
+      formControlName="title" placeholder="title here ...">
+    </div>
+    <div class="mb-3">
+        <textarea  class="form-control" id="" cols="30" rows="3" style="width: 100%" placeholder="text here..." formControlName="text" ></textarea>
+    </div>   
+    <div class="mb-3">
+      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="author here..." formControlName="author">
+    </div>
+    <button type="button" class="btn btn-dark" (click)="createPost()" [disabled]='postForm.invalid' *ngIf="editStatus" >Add</button>
+    <button type="button" class="btn btn-outline-dark" (click)="savePost()" *ngIf="!editStatus">Save</button>
+  </form>
+
+  <br>
+
+  <table class="table caption-top">
+    <thead>
+      <tr >
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Text</th>
+        <th scope="col">Date</th>
+        <th scope="col">Author</th>
+        <th class="set" scope="col">Edit</th>
+        <th class="set" scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tr  *ngFor="let post of posts; let i=index;  trackBy: trackBy" >
+      <td>{{ i + 1 }}</td>
+      <td>{{ post.title }}</td>
+      <td>{{ post.text | slice:0:5 }}</td>
+      <td>{{ post.date | date:'mediumDate' }}</td>
+      <td>{{ post.author }}</td>
+      <td><button type="button" class="btn btn-dark-set"(click)="editPost(post)"> Edit </button></td>
+      <td><button type="button" class="btn btn-dark-set"  (click)="deletePost(post)"> Delete </button></td>
+    </tr>
+    <tbody>
+
+    </tbody>
+  </table>
